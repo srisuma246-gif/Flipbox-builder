@@ -28,7 +28,7 @@ A Flipbox Builder application built with Vue and TipTap. Users can create front 
 
 Clone the repository:
 
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone 
 
 Go to the project folder:
 
@@ -57,9 +57,7 @@ http://localhost:5173/
 5. Click "Save Flipbox" to save the content.
 6. Refresh the page to verify that saved content persists.
 
-## Author
 
-Sumathi Gottipati
 
 ## Project structure
 
@@ -74,4 +72,8 @@ src/
     RichTextEditor.vue           # TipTap wiring; TODO: formatting toolbar
   composables/
     usePersistence.js            # generic localStorage save/load helper
+
+## Author
+
+Sumathi Gottipati
 
