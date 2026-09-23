@@ -1,40 +1,65 @@
-# Flipbox Builder - Starter App
+# Flipbox Builder
 
-This is the starter project for the Flipbox Builder developer task. It gives
-you a running Vue 3 + Vite project with TipTap 3 installed and wired up, a
-generic persistence helper, base styling, and empty component shells marked
-with `TODO` comments where your work should go.
+A Flipbox Builder application built with Vue and TipTap. Users can create front and back content, apply rich-text formatting, and see their changes immediately in a live preview.
 
-Refer to the full task spec for requirements, evaluation priorities, time
-expectations, and submission instructions. This README only covers getting
-the starter running.
+## Features
 
-## Requirements
+- Edit Front and Back flipbox content
+- Bold formatting
+- Italic formatting
+- Bulleted lists
+- Undo and Redo
+- Live preview while editing
+- Flip between Front and Back
+- Save flipbox content
+- Saved content persists after page refresh
+- Keyboard-accessible flipbox interaction
 
-- Node.js 20.19.x, or Node.js 22.12 or later
-- npm
+## Technologies Used
 
-## Install and run
+- Vue.js
+- Vite
+- TipTap
+- JavaScript
+- HTML
+- CSS
 
-```bash
+## Installation
+
+Clone the repository:
+
+git clone <YOUR-GITHUB-REPOSITORY-URL>
+
+Go to the project folder:
+
+cd flipbox-builder
+
+Install dependencies:
+
 npm install
+
+## Run the Application
+
+Start the development server:
+
 npm run dev
-```
 
-Other available scripts:
+Open the local URL displayed in the terminal, typically:
 
-```bash
-npm run build    # production build
-npm run preview  # preview the production build locally
-```
+http://localhost:5173/
 
-## Dependency baseline
+## How to Use
 
-Updated September 14, 2026 to TipTap 3.31.3, Vue 3.5.42, Vite 8.3.0,
-and @vitejs/plugin-vue 6.0.9. The lockfile records the resolved versions.
-Use `npm ci` for a reproducible install. Follow the TipTap v3 documentation;
-`setContent` takes an options object, including `emitUpdate: false` when
-synchronizing incoming content without emitting another update.
+1. Enter content in the Front and Back editors.
+2. Use the toolbar to apply Bold, Italic, or List formatting.
+3. Changes appear immediately in the Preview.
+4. Click the preview card to flip between Front and Back.
+5. Click "Save Flipbox" to save the content.
+6. Refresh the page to verify that saved content persists.
+
+## Author
+
+Sumathi Gottipati
 
 ## Project structure
 
@@ -49,35 +74,4 @@ src/
     RichTextEditor.vue           # TipTap wiring; TODO: formatting toolbar
   composables/
     usePersistence.js            # generic localStorage save/load helper
-```
 
-## What's already set up for you
-
-- A running Vue 3 + Vite project, using the Composition API (`<script setup>`).
-- TipTap wired into `RichTextEditor.vue`, including one working example
-  button (Bold) that shows the command pattern.
-- A generic `localStorage` helper in `usePersistence.js` (save/load/clear).
-- Base styling in `style.css`, including a visible focus style for buttons.
-- `App.vue` renders the builder and preview side by side as a starting
-  layout, both driven by the same reactive state so the preview updates
-  live as you edit.
-
-## What you need to build
-
-Look for `TODO` comments in:
-
-- **`RichTextEditor.vue`** - the formatting toolbar (bold, italic, one list
-  style, undo, redo).
-- **`FlipboxBuilder.vue`** - persistence, and anything else beyond
-  front/back text you choose to add.
-- **`FlipboxPreview.vue`** - the flip interaction itself, and communicating
-  the current side without relying only on the visual animation.
-
-## Restructuring the starter
-
-You're free to restructure components, rename files, add supporting
-packages, or change the layout, as long as the required behavior in the
-task spec is met - including the requirement that the preview update live
-as the flipbox is edited, without a manual save/refresh and without a
-separate browser tab or window. Note any significant changes you make in
-your project summary.
